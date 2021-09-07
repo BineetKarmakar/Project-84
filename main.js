@@ -1,4 +1,6 @@
 // Create a reference for the canvas
+canvas=document.getElementById("myCanvas");
+ctx=canvas.getContext("2d")
 
 img_width = 300;
 img_height = 100;
@@ -21,6 +23,8 @@ function uploadimg() {
 
 //Write a code to grab the key-pressed event
 
+window.addEventListener("keydown",my_keydown);
+
 function my_keydown(e) {
 	keyPressed = e.keyCode;
 	console.log(keyPressed);
@@ -42,7 +46,7 @@ function my_keydown(e) {
 	//write a code to check the type of key pressed
 	else {
 		otherkey();
-		document.getElementById("d1").innerHTML = "You pressed symbol or other key";
+		document.getElementById("text").innerHTML = "You pressed symbol or other key";
 	}
 }
 
@@ -71,3 +75,4 @@ function otherkey() {
 	img_image = "otherkey.png";
 	add();
 }
+d1
